@@ -19,15 +19,15 @@ class Solution {
  public:
   vector<int> inorderTraversal(TreeNode *root) {
     vector<int> result;
-    return traversal(root, result);
+    traversal(root, result);
+    return result;
   }
 
-  vector<int> traversal(TreeNode *root, vector<int> &result) {
+  void traversal(TreeNode *root, vector<int> &result) {
     if (root == nullptr)
-      return result;
+      return;
     traversal(root->left, result);
     result.emplace_back(root->val);
     traversal(root->right, result);
-    return result;
   }
 };
