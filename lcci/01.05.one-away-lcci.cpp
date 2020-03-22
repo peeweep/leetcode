@@ -60,9 +60,8 @@ class Solution {
 };
 
 int main() {
-  auto* so = new Solution();
-  cout << so->oneEditAway("a", "b");
-
+  Solution so;
+  cout << so.oneEditAway("a", "b");
   return 0;
 }
 
